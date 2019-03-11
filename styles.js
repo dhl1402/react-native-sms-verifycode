@@ -11,7 +11,7 @@ import { getScreenWidth } from './util';
 
 const styles = StyleSheet.create({
   container: {
-    width: getScreenWidth(),
+    width: '100%',
   },
   hiddenTextInput: {
     width: 0,

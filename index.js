@@ -91,7 +91,7 @@ class VerifyCode extends Component {
     if (codeLength === 0) {
       const codeArray = getCodeArray([], verifyCodeLength);
       this.curCodeLength = 0;
-      onInputChangeText(text);
+      onInputChangeText && onInputChangeText(text);
       this.setState({
         text: '',
         codeArray,
@@ -115,7 +115,7 @@ class VerifyCode extends Component {
           }
           codeArray = getCodeArray(codeArray, verifyCodeLength);
           this.curCodeLength = codeLength;
-          onInputChangeText(text);
+          onInputChangeText && onInputChangeText(text);
           this.setState(
             {
               text,
@@ -136,7 +136,7 @@ class VerifyCode extends Component {
       } else { // minus
         codeArray = getCodeArray(codeArray, verifyCodeLength);
         this.curCodeLength = codeLength;
-        onInputChangeText(text);
+        onInputChangeText && onInputChangeText(text);
         this.setState({
           text,
           codeArray,
