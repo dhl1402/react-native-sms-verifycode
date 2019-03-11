@@ -300,7 +300,6 @@ class VerifyCode extends Component {
 
     return (
       <TouchableOpacity
-        style={styles.container}
         activeOpacity={1}
         onPressIn={() => {
           if (!this.keyboardShow) { this.blur(); }

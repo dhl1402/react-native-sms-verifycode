@@ -16,10 +16,9 @@ import { Colors, Constants, getScreenWidth } from '../util';
 
 const styles = StyleSheet.create({
   defaultContainerStyle: {
-    width: '100%',
     flexDirection: 'row',
     backgroundColor: 'white',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   defaultCodeViewStyle: {
     borderWidth: Constants.codeViewBorderWidth,
@@ -47,7 +46,6 @@ const CodeView = (props) => {
     focused,
     codeArray,
     coverBGColorList,
-    gapWidth,
 
     containerStyle,
     containerPaddingVertical,
@@ -103,9 +101,6 @@ const CodeView = (props) => {
     >
       {
         codeArray.map((code, index) => {
-          const marginLeft = 0;
-          const marginRight = 0;
-
           // code view style
           const viewWidth = codeViewWidth ? { width: codeViewWidth } : {};
           const viewHight = codeViewHeight ? { height: codeViewHeight } : { height: codeViewWidth };
@@ -133,8 +128,6 @@ const CodeView = (props) => {
                     {
                       ...viewWidth,
                       ...viewHight,
-                      marginLeft,
-                      marginRight,
                       ...viewBackgroundColor,
                       ...viewBorderWidth,
                       ...viewBorderRadius,

@@ -10,9 +10,6 @@ import { StyleSheet } from 'react-native';
 import { getScreenWidth } from './util';
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-  },
   hiddenTextInput: {
     width: 0,
     height: 0,
